@@ -13,7 +13,7 @@ namespace GeneralPurpose
         public TextMeshProUGUI tmpText;
 
         private float timer;
-        private bool isRunning = true;
+        public bool isRunning = true;
 
         private void Start()
         {

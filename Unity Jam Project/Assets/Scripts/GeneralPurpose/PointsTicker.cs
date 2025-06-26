@@ -17,6 +17,8 @@ namespace GeneralPurpose
 
         private int currentPoints = 0;
 
+        public bool isRunning = true;
+        
         private void Start()
         {
             UpdateLabel();                                       // Muestra el valor inicial
@@ -32,6 +34,8 @@ namespace GeneralPurpose
 
         private void UpdateLabel()
         {
+            if(!isRunning) return;  // No actualiza si no está activo
+            
             string label = $"Puntos: {currentPoints}";
             if (tmpText != null) tmpText.text = label;
         }
