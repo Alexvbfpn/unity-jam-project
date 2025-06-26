@@ -41,6 +41,8 @@ namespace PlayerBehaviour
         protected virtual void Die()
         {
             OnPlayerDied?.Invoke();
+            GetComponent<Player>().isAlive = false;
+            Destroy(gameObject, 1);
             // Additional death logic can be added here
             Debug.Log("Player has died.");
         }

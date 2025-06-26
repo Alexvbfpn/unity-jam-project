@@ -45,6 +45,8 @@ namespace PlayerBehaviour
 		
 		public float _lastFoodEatenAt = -100f;
 	    
+		public bool isAlive = true;
+		
 		protected Vector3 _newPosition;
 		//protected MMPositionRecorder _recorder;
 		protected float _lastLostPart = 0f;
@@ -66,6 +68,8 @@ namespace PlayerBehaviour
 		/// </summary>
 		protected virtual void Update()
 		{
+			
+			if (!isAlive) return;
 			HandleInput();   
 			HandleMovement();
 		}

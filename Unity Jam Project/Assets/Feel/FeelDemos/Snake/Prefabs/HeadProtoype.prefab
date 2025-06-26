@@ -14942,6 +14942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnParticle: {fileID: 887969641270025558}
+  killParticle: {fileID: 1280382540464160374}
 --- !u!114 &5366474169588223432
 MonoBehaviour:
   m_ObjectHideFlags: 0

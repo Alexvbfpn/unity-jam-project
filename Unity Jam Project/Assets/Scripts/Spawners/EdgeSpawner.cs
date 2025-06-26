@@ -28,7 +28,7 @@ namespace Spawners
         private IEnumerator SpawnRoutine()
         {
             var wait = new WaitForSeconds(spawnInterval);
-            while (true)
+            while (target != null)
             {
                 SpawnOne();
                 yield return wait;

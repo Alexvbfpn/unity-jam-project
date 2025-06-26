@@ -10,16 +10,21 @@ namespace PlayerBehaviour
         protected Player m_player;
 
         [Header("Particles")] public ParticleSystem turnParticle;
-        
-        
+        public ParticleSystem killParticle;
         public override void InitializeEvents()
         {
             m_player.OnPlayerTurn.AddListener(PlayTurnParticle);
+            m_player.Health.OnPlayerDied.AddListener(PlayKillParticle);
         }
 
         protected void PlayTurnParticle()
         {
             Play(turnParticle);
+        }
+        
+        protected void PlayKillParticle()
+        {
+            Play(killParticle);
         }
         
         protected void Awake()
