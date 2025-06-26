@@ -99,8 +99,8 @@ namespace PlayerBehaviour
 		{
 			//TurnFeedback?.PlayFeedbacks();
 			OnPlayerTurn?.Invoke();
-			Direction = CustomMath.RotateVector2(Direction, 90f);
-			this.transform.Rotate(new Vector3(0f,0f,90f));
+			Direction = CustomMath.RotateVector2(Direction, -90f);
+			this.transform.Rotate(new Vector3(0f,0f,-90f));
 		}
 
 		/// <summary>

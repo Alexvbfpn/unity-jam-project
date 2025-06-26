@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 4375161122084480222, guid: 0211db223075a57438b0c9af6aacbd81,
         type: 3}
       propertyPath: m_Name
-      value: DamageElement Variant
+      value: DamageElement
       objectReference: {fileID: 0}
     - target: {fileID: 7384064555993277168, guid: 0211db223075a57438b0c9af6aacbd81,
         type: 3}
@@ -61,6 +61,21 @@ PrefabInstance:
     - target: {fileID: 7384064555993277168, guid: 0211db223075a57438b0c9af6aacbd81,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243838160952204105, guid: 0211db223075a57438b0c9af6aacbd81,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243838160952204105, guid: 0211db223075a57438b0c9af6aacbd81,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.022290468
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243838160952204105, guid: 0211db223075a57438b0c9af6aacbd81,
+        type: 3}
+      propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
