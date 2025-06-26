@@ -2,6 +2,7 @@
 using Tools;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace PlayerBehaviour
@@ -32,20 +33,11 @@ namespace PlayerBehaviour
 		public UnityEvent OnPlayerTurn;
 		public UnityEvent OnPlayerTeleport;
 		
-		// /// a feedback to play when the snake turns
-		// public MMFeedbacks TurnFeedback;
-		// /// a feedback to play when the snake teleports to the other side of the screen
-		// public MMFeedbacks TeleportFeedback;
-		// /// a feedback to play when teleporting once
-		// public MMFeedbacks TeleportOnceFeedback;
-		// /// a feedback to play when eating snake food
-		// public MMFeedbacks EatFeedback;
-		// /// a feedback to play when losing a body part
-		// public MMFeedbacks LoseFeedback;
+		public PlayerHealth Health;
 	    
 		[Header("Debug")]
 		
-		public int SnakePoints = 0;
+		public int PlayerPoints = 0;
 		
 		public float _speed;
 		
@@ -63,7 +55,8 @@ namespace PlayerBehaviour
 		protected void Awake()
 		{
 			_speed = Speed;
-			SnakePoints = 0;
+			PlayerPoints = 0;
+			Health = gameObject.GetComponent<PlayerHealth>();
 			//_recorder = this.gameObject.GetComponent<MMPositionRecorder>();
 			if(PointsCounter) PointsCounter.text = "0";
 		}
@@ -148,8 +141,8 @@ namespace PlayerBehaviour
 			//EatEffect();
 	        
 			//EatFeedback?.PlayFeedbacks();
-			SnakePoints++;
-			PointsCounter.text = SnakePoints.ToString();
+			PlayerPoints++;
+			PointsCounter.text = PlayerPoints.ToString();
 		}
 		
 		/// <summary>
@@ -167,8 +160,8 @@ namespace PlayerBehaviour
 			_lastLostPart = Time.time;
 			//Destroy(_snakeBodyParts[_snakeBodyParts.Count-1].gameObject);
 			//_snakeBodyParts.RemoveAt(_snakeBodyParts.Count-1);
-			SnakePoints--;
-			PointsCounter.text = SnakePoints.ToString();
+			PlayerPoints--;
+			PointsCounter.text = PlayerPoints.ToString();
 		}
     }
 }
