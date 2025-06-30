@@ -22,9 +22,16 @@ namespace Spawners
             if (cam == null) cam = Camera.main;
             if (target == null) target = transform;     // Hacia el centro si no hay jugador
 
-            StartCoroutine(SpawnRoutine());
+            Invoke(nameof(StartSpawn), 1.5f);
+            
+            //StartCoroutine(SpawnRoutine());
         }
 
+
+        protected void StartSpawn()
+        {
+            StartCoroutine(SpawnRoutine());
+        }
         private IEnumerator SpawnRoutine()
         {
             var wait = new WaitForSeconds(spawnInterval);

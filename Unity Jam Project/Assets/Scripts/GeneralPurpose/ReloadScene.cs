@@ -8,7 +8,8 @@ namespace GeneralPurpose
     public class ReloadScene : MonoBehaviour
     {
         public Canvas canvas;
-        
+        public AudioSource backgroundMusic;
+        public AudioSource deadAudio;
         public void Awake()
         {
             canvas = GetComponent<Canvas>();
@@ -27,6 +28,8 @@ namespace GeneralPurpose
             canvas.enabled = true;
             FindObjectOfType<TimerDisplay>().isRunning = false;
             FindObjectOfType<PointsTicker>().isRunning = false;
+            backgroundMusic.Pause();
+            deadAudio.Play();
         }
 
         /// <summary>

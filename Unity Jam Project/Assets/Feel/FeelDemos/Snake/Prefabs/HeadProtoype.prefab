@@ -14873,6 +14873,7 @@ GameObject:
   - component: {fileID: 7426210989272138752}
   - component: {fileID: 887969642001634520}
   - component: {fileID: 887969642001634527}
+  - component: {fileID: 537262017640478022}
   m_Layer: 0
   m_Name: HeadProtoype
   m_TagString: Untagged
@@ -14929,6 +14930,7 @@ MonoBehaviour:
   _speed: 0
   _speedMultiplier: 0
   _lastFoodEatenAt: -100
+  isAlive: 1
 --- !u!114 &5059140160553223693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15056,6 +15058,25 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &537262017640478022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887969642001634516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6924722c0d104e16b8170d280e7bd1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnClip: {fileID: 0}
+  killClip: {fileID: 8300000, guid: db9c6adb28290ee44863c07cc197cc1a, type: 3}
+  turnClips:
+  - {fileID: 8300000, guid: e5fac7c77baba1d45b2376b8482366f2, type: 3}
+  - {fileID: 8300000, guid: 4b8491324b5be2a4a9c45da3e518078e, type: 3}
+  - {fileID: 8300000, guid: ac75ff69bb14ad74c990a171c0bd9e20, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &1859146799723750880
 GameObject:
   m_ObjectHideFlags: 0
